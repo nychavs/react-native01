@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: 'linear-gradient(180deg, rgba(81,169,219,1) 0%, rgba(163,209,236,1) 51%, rgba(234,245,255,1) 87%)',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#C0E9FF',
         padding: 10,
         borderColor: '#777',
-        borderRadius: 5,
+        borderRadius: '1.2vw',
         color: 'rgba(31, 131, 189, 0.46)',
     },
     botaoLogin: {
