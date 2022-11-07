@@ -3,60 +3,48 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#0c0',
+        backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: 'center',
     },
-    texto1: {
-        fontSize: 50,
-    },
-    botao: {
-        width: '60%',
-        height: 50,
-        backgroundColor: '#555',
-        justifyContent: 'center',
+    inputContainer: {
+        width: '30%',
+        height: '40%',
+        backgroundColor: '#1F83BD',
+        borderRadius: '2vw',
+        display: 'flex',
         alignItems: 'center',
-        borderRadius: 8,
-    },
-    btn: {
-        width: '100%',
-        height: 60,
-        padding: 10,
         justifyContent: 'center',
-        alignItems: 'center',
+    },
+    TextInput: {
+        marginTop: '1.5vw',
+        color: 'white',
     },
     txtButton: {
         fontFamily: 'Verdana',
         fontSize: 20,
         color: '#DDD',
     },
-    txt: {
-        color: '#f00',
-        fontSize: 40,
-    },
-    botoes: {
-        width: '50%',
-        padding: 10,
-        justifyContent: 'center',
-
-    },
     txtInput1: {
-        width: '60%',
-        height: 40,
-        backgroundColor: '#bbb',
+        width: '80%',
+        height: '7vh',
+        backgroundColor: '#C0E9FF',
         padding: 10,
-        marginBottom: 10,
-        marginTop: 10,
         borderColor: '#777',
         borderRadius: 5,
+        color: 'rgba(31, 131, 189, 0.46)',
     },
     botaoLogin: {
-        height: 40,
-        backgroundColor: '#555',
-        borderRadius: 8,
+        padding: 10,
+        width:'10vw',
+        height: 35,
+        backgroundColor: '#4FB3ED',
+        borderRadius: 15,
         color: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: '1vw',
+        marginBottom: '0.7vw',
         fontSize: 20,
         fontFamily: 'Verdana'
     }

@@ -37,27 +37,33 @@ export default function Login ({ navigation }) {
 
   return (
     <View style={Styles.container}>
+
+      <View style={Styles.inputContainer}>
+        <Text style={styles.TextInput}>CPF do Titular</Text>
       <TextInput
         style={Styles.txtInput1}
-        placeholder='email'
+        placeholder='Digite apenas números'
         keyboardType='text'
         value={email}
         onChangeText={(text) => setEmail(text)}
-      />
+        />
+        <Text style={styles.TextInput}>Senha Digital</Text>
       <TextInput 
         style={Styles.txtInput1}
-        placeholder='password'
+        placeholder='Senha de 8 dígitos'
         keyboardType='password'
         value={password}
         onChangeText={(text)=>setPassword(text)}
-      />
+        />
       <View style={Styles.botoes}>
         <TouchableOpacity
           style={Styles.botaoLogin}
           onPress={()=>loginFirebase()}
-        >
-          <Text style={styles.txtButton}>Login</Text>
+          >
+          <Text style={styles.txtButton}>Entrar</Text>
         </TouchableOpacity>
+          </View>
+
       </View>
     </View>
   )
