@@ -1,0 +1,12 @@
+storage é uma constante que criamos pra usar o
+componente storage do firebase ele vai servir pra 
+salvar/acessar arquivos de imagem salvos no banco
+
+useeffect assim que a pagina for renderizada ou alguma ação
+acontecer (mudar variavel, clicar no botao etc) ele excuta a função 
+se tiver vazio ele executa só quando carregar a página
+
+em delete, na função que da push na lista com os dados do banco
+tem 3 pontos, que significa spread, o spread faz 
+
+dimension css

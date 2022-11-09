@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor:'#c00',
+        backgroundColor:'#ed5c53',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -30,6 +30,21 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: '#DDD',
     },
+    pageDelete:{
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: '2vw'
+    },
+    deleteItem:{
+        justifyContent: 'center',
+        paddingLeft: '15px'
+    },
+    txtDelete:{
+        padding:'5px',
+        backgroundColor:'#f0b3af',
+        margin:'2px'
+    }
 })
 
 export default styles
