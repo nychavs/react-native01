@@ -6,6 +6,8 @@ import {auth, logInWithEmailAndPassword }from "./firebaseConfig"
 import Create from '../create'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useNavigation } from '@react-navigation/native'
+import { LinearGradient } from 'expo-linear-gradient';
+import Logo from '../../assets/nay.png'
 
 
 export default function Login ({ navigation }) {
@@ -30,15 +32,25 @@ export default function Login ({ navigation }) {
     // auth.signInWithEmailAndPassword(email, password)
     // console.log("LOGOU")
     // .then((userCredential)=>{
-    //     let user = userCredential.user;
-    //     navigation.navigate('Create')
-    // })
-  }
-
-  return (
+      //     let user = userCredential.user;
+      //     navigation.navigate('Create')
+      // })
+    }
+    // const colorList = [
+  //   {offset: '0%', color: 'rgba(81,169,219,1)'}, 
+  //   {offset: '51%', color: 'rgba(163,209,236,1)'}, 
+  //   {offset: '87%', color: 'rgba(234,245,255,1)'}
+  // ]
+  return ( 
     <View style={Styles.container}>
-
-      <View style={Styles.inputContainer}>
+      <LinearGradient
+        colors={['rgba(81,169,219,1)', 'rgba(163,209,236,1)','rgba(234,245,255,1)']}
+        degree={90}
+        start={{ x: 0, y: 0 }}
+        style={styles.linearGradient}>
+      <img src={Logo} style={styles.imgLogo}></img>
+          </LinearGradient>
+        <View style={Styles.inputContainer}>
         <Text style={styles.TextInput}>CPF do Titular</Text>
       <TextInput
         style={Styles.txtInput1}
@@ -63,8 +75,12 @@ export default function Login ({ navigation }) {
           <Text style={styles.txtButton}>Entrar</Text>
         </TouchableOpacity>
           </View>
-
       </View>
+          <View>
+            <Text style={styles.txtClick}>Esqueci a senha</Text>
+            <Text style={styles.txtClick2}>Primeiro Acesso</Text>
+            <Text style={styles.txtClick2}>Pedir meu cartão MONAY</Text>
+            </View>
     </View>
   )
 }

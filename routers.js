@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -11,11 +11,15 @@ import Delete from './pages/delete';
 import Login from './pages/login';
 import Image from './pages/image';
 import User from './pages/user';
+import { useAuthState } from 'react-firebase-hooks/auth'
+import {auth, logInWithEmailAndPassword }from "./pages/login/firebaseConfig"
 
 const Pilha = createStackNavigator()
 const Nav = createBottomTabNavigator()
 
 function NavBar() {
+
+
     return (
         <Nav.Navigator
             screenOptions={{
@@ -98,9 +102,16 @@ function NavBar() {
 }
 
 export default function Routers() {
+    const [page, setPage] = useState()
+    const [user, loading, error] = useAuthState(auth)
+    useEffect (() =>{
+        if(loading){
+          return;
+        }
+        if(user) setPage(true)
+      })
     return (
         <NavigationContainer>
-
             <Pilha.Navigator>
                 <Pilha.Screen
                     name='NavBar'
