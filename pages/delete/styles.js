@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor:'#ed5c53',
+        backgroundColor:'white',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -19,16 +19,20 @@ const styles = StyleSheet.create({
         borderRadius: 8,
     },
     btn: {
-        width: '100%',
+        width: '50%',
         height: 60,
-        padding: 10,
+        padding: 20,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#238223f',
+        borderRadius:5,
+        shadowColor:{height: 4, width: 4},
+        shadowColor: '#238223f'
     },
     txtButton: {
         fontFamily: 'Verdana',
         fontSize: 30,
-        color: '#DDD',
+        color: 'black',
     },
     pageDelete:{
         width: '100%',
@@ -44,6 +48,11 @@ const styles = StyleSheet.create({
         padding:'5px',
         backgroundColor:'#f0b3af',
         margin:'2px'
+    },
+    bntContainer:{
+        padding: 20,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })
 
